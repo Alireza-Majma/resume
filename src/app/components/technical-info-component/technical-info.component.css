@@ -1,0 +1,31 @@
+:host {
+
+  /* background-color: blueviolet; */
+
+  display: grid;
+  place-items: center;
+  height: 100vv;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  background-color: dimgray;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: darkslategray;
+  font-size: 1.3em;
+}
+
+tr:nth-child(even) {
+  background-color: gray;
+}

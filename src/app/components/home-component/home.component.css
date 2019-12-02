@@ -1,3 +1,4 @@
+
 .center {
   text-align: center;
 }
@@ -6,26 +7,25 @@
 .title-div {
   font-size: 5.0em;
   color: floralwhite;
+  font-weight: bold;
 }
 .career-div{
   font-size: 3.0em;
   color: floralwhite;
+  font-weight: bold;
 }
-.round-image{
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  align-content: center;
-}
+
 .info-div{
-  font-size: 1.2em;
-  color: floralwhite;
+  font-size: 1.5em;
+  color: greenyellow;
 }
 
 .address-div{
-  position: fixed;
-  bottom: 5px;
-
-  font-size: 1.70em;
+  font-size: 1.5em;
+  font-weight: bold;
   color: floralwhite;
+}
+
+.filler-div {
+  height: 10vh;
 }
