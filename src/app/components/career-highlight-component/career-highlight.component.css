@@ -1,0 +1,15 @@
+:host {
+
+  /* background-color: blueviolet; */
+
+  display: grid;
+  place-items: center;
+  height: 100vv;
+  color: white;
+}
+
+ul {
+  font-size: 1.6em;
+  background-color: dimgray;
+  line-height: 160%;
+}
