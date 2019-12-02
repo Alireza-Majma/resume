@@ -10,9 +10,9 @@ const routes: Routes = [
   // {path: 'career-highlight' , component: CareerHighlightComponent},
   // {path: 'experience-info' , component: ExperienceInfoComponent},
   {path: 'info', loadChildren: () => import('./info-module/info-module/info.module').then(m => m.InfoModule) },
-  {path: '' ,  component: HomeComponent,  pathMatch: 'full'},
-  {path: '**' ,  component: HomeComponent}
-  // {path: '' ,  redirectTo: '/home',  pathMatch: 'full'}
+  {path: '' ,  redirectTo: 'home',  pathMatch: 'full'},
+  // {path: '**' ,  component: HomeComponent}
+  {path: '**' ,  redirectTo: 'home'}
 ];
 
 @NgModule({
