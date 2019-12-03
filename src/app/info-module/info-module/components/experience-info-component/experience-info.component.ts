@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../../info.service';
+import { Observable } from 'rxjs';
+import { ExperienceInfo } from 'src/app/info-module/models';
 
 @Component({
   selector: 'app-experience-info-component',
@@ -7,8 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: InfoService) { }
+  infoList$: Observable<ExperienceInfo[]>;
 
-  ngOnInit() {  }
+  ngOnInit() {
+     this.infoList$ = this.service.getExperienceInfo();
+     this.infoList$.subscribe(x => console.log(x));
+  }
 
 }

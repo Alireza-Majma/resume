@@ -5,17 +5,23 @@ import { TechnicalInfoComponent } from './components/technical-info-component/te
 import { CareerHighlightComponent } from './components/career-highlight-component/career-highlight.component';
 import { ExperienceInfoComponent} from './components/experience-info-component/experience-info.component';
 import { InfoRoutingModule } from './info-module-routing';
+import { HttpClientModule } from '@angular/common/http';
+import {InfoService} from './info.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    InfoRoutingModule
+    InfoRoutingModule,
+    HttpClientModule
   ],
   declarations: [
     EducationInfoComponent,
     TechnicalInfoComponent,
     CareerHighlightComponent,
     ExperienceInfoComponent
+  ],
+  providers: [
+    InfoService
   ]
 })
 export class InfoModule { }

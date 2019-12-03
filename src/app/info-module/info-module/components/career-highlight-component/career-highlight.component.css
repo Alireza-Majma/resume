@@ -7,8 +7,24 @@
   color: white;
 }
 
-ul {
-  font-size: 1.6em;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
   background-color: dimgray;
-  line-height: 160%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: darkslategray;
+  font-size: 1.3em;
+}
+
+tr:nth-child(even) {
+  background-color: gray;
 }

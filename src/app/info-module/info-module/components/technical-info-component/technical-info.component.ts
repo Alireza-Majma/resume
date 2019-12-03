@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { TechnicalInfo } from 'src/app/info-module/models';
+import { InfoService } from '../../info.service';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+
+
 
 @Component({
   selector: 'app-technical-info-component',
@@ -7,8 +13,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnicalInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: InfoService) { }
 
-  ngOnInit() {  }
+  public InfoList$: Observable<TechnicalInfo[]>;
+
+  ngOnInit() {
+    this.service.getTechnicalInfo();
+
+    this.InfoList$ = this.service.getTechnicalInfo().pipe(tap(x => console.log(x)));
+
+  }
 
 }

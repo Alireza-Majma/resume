@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InfoService } from '../../info.service';
+import { Observable } from 'rxjs';
+import { EducationInfo } from 'src/app/info-module/models';
 
 @Component({
   selector: 'app-general-info-component',
@@ -7,8 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: InfoService) { }
+  EducationList$: Observable<EducationInfo[]>;
+  CertificateList$: Observable<EducationInfo[]>;
 
-  ngOnInit() {  }
+  ngOnInit() {
+    this.EducationList$ = this.service.getEducationInfo();
+    this.CertificateList$ = this.service.getCertificateInfo();
+   }
 
 }

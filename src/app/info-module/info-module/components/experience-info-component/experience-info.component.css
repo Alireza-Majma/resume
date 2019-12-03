@@ -13,6 +13,7 @@ table {
   border-collapse: collapse;
   width: 50%;
   background-color: dimgray;
+  margin-bottom: 8px;
 }
 
 td, th {
