@@ -1,9 +1,16 @@
 
-<div class="wrapper">
+<div class="wrapper ">
 <div class="filler-div">
 </div>
 <div class="center">
+    <nav>
+        <ul>
+            <!-- (click)="linkClicked('info/tool-info')"  -->
+          <li><a [routerLink]="['/','info','tool-info']" routerLinkActive="active">Tools</a></li>
+          <li><a [routerLink]="['/','info','blog-info']" routerLinkActive="active">Blogs</a></li>
 
+        </ul>
+      </nav>
   <div class="title-div">
     Alreza Majma
   </div>>
@@ -27,4 +34,6 @@
     <p>254 Hopecrest road, Markham, ON L6C2H5</p>
     <p>Majma@Rogers.com (416) 578-7282</p>
 </div>
+
 </div>
+

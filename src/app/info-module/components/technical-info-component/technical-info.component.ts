@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TechnicalInfo } from 'src/app/info-module/models';
+import { GeneralInfo } from 'src/app/info-module/models';
 import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -15,12 +15,10 @@ export class TechnicalInfoComponent implements OnInit {
 
   constructor(private service: InfoService) { }
 
-  public InfoList$: Observable<TechnicalInfo[]>;
+  public InfoList$: Observable<GeneralInfo[]>;
 
   ngOnInit() {
-    this.service.getTechnicalInfo();
-
-    this.InfoList$ = this.service.getTechnicalInfo().pipe(tap(x => console.log(x)));
+    this.InfoList$ = this.service.getTechnicalInfo();
 
   }
 

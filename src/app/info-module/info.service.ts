@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TechnicalInfo, ExperienceInfo, HighlightInfo, EducationInfo } from '../models';
+import { GeneralInfo, ExperienceInfo, HighlightInfo, EducationInfo } from './models';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs/operators';
@@ -10,7 +10,7 @@ export class InfoService {
 
 constructor(private http: HttpClient ) {}
 
-public getTechnicalInfo(): Observable<TechnicalInfo[]> {
+public getTechnicalInfo(): Observable<GeneralInfo[]> {
     const rslt =  this.http.get('assets/technical-info.json');
     return rslt as any;
 }
@@ -31,6 +31,14 @@ public getEducationInfo(): Observable<EducationInfo[]> {
 }
 public getCertificateInfo(): Observable<EducationInfo[]> {
   const rslt =  this.http.get('assets/certificate-info.json');
+  return rslt as any;
+}
+public getToolInfo(): Observable<GeneralInfo[]> {
+  const rslt =  this.http.get('assets/tool-info.json');
+  return rslt as any;
+}
+public getBlogInfo(): Observable<GeneralInfo[]> {
+  const rslt =  this.http.get('assets/blog-info.json');
   return rslt as any;
 }
 }

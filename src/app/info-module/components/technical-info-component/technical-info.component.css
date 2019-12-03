@@ -4,7 +4,6 @@
 
   display: grid;
   place-items: center;
-  height: 100vw;
   color: white;
 }
 
@@ -23,15 +22,9 @@ td, th {
 
 th {
   background-color: darkslategray;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 tr:nth-child(even) {
   background-color: gray;
-}
-
-ul {
-  font-size: 1.1em;
-  background-color: dimgray;
-  line-height: 160%;
 }

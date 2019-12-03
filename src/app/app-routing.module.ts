@@ -9,7 +9,7 @@ const routes: Routes = [
   // {path: 'technical-info' , component: TechnicalInfoComponent},
   // {path: 'career-highlight' , component: CareerHighlightComponent},
   // {path: 'experience-info' , component: ExperienceInfoComponent},
-  {path: 'info', loadChildren: () => import('./info-module/info-module/info.module').then(m => m.InfoModule) },
+  {path: 'info', loadChildren: () => import('./info-module/info.module').then(m => m.InfoModule) },
   {path: '' ,  redirectTo: 'home',  pathMatch: 'full'},
   // {path: '**' ,  component: HomeComponent}
   {path: '**' ,  redirectTo: 'home'}

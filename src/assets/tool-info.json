@@ -1,0 +1,12 @@
+[
+  { "title": "Can I Use", "url":"https://caniuse.com/", "def": "If you’ve ever wondered about browser compatibility for any web APIs (e.g.: local storage), Can I use is the place to go. It offers updated support tables to determine the support of APIs for desktop and mobile browsers." },
+  { "title": "Unminify", "url":"https://unminify.com/", "def": "Unminify.com is a free online tool to unminify (unpack, deobfuscate) JavaScript, CSS, and HTML code, making it readable and pretty. It’s one of the most-used websites for code beautification." },
+  { "title": "Compressor", "url":"https://compressor.io/", "def": "Compressor.io is an online tool for reducing the size of your images without losing image quality. The tool is so good that there is almost no difference before and after compression of the image." },
+  { "title": "Cloudcraft", "url":"https://cloudcraft.co/", "def": "Cloudcraft helps you design and budget your cloud. It has a very cool drag and drop interface to create 3D diagrams, by connecting different cloud infrastructure services (currently only for AWS)." },
+  { "title": "Repl.it", "url":"https://repl.it/", "def": "Repl.it is the perfect online IDE that you have been looking for, all those years. You can boot any programming environment for your favorite language or tech stack in less than two seconds." },
+  { "title": "RequestBin", "url":"https://requestbin.com/", "def": "RequestBin gives you an instant HTTP endpoint that will collect all the requests sent so that you can interpret them easily to check and validate data." },
+  { "title": "Web Code", "url":"https://webcode.tools/", "def": "Web Code is one of the best code generators out there. You can generate code for various basic and advanced needs by just entering your requirements." },
+  { "title": "BundlePhobia", "url":"https://bundlephobia.com/", "def": "BundlePhobia helps you analyze how much size an npm package can add to your project." },
+  { "title": "Fingerprint.js", "url":"https://fingerprintjs.com/", "def": "this awesome library produces a distinctive browser identifier without the use of cookies or any data that a malicious user can reset readily. It quickly extracts numerous properties from a web browser, which can be used separately, or to create a hash which can be used to identify a unique user." },
+  { "title": "Canva", "url":"https://www.canva.com/", "def": "Canva has a mission to empower the world to design. With our simple design tool and a can-do attitude, you’ll be achieving your creative goals in no time" }
+]

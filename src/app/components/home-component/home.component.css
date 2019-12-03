@@ -25,5 +25,24 @@
   font-weight: bold;
   color: floralwhite;
 }
+nav {
+  float: right;
+  width: 100px;
+  height: 500px; /* only for demonstration, should be removed */
 
+  padding: 50px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+nav a {
+  line-height: 160%;
+  font-size: 1.5em;
+  color: bisque;
+}
 

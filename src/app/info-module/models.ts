@@ -1,6 +1,7 @@
-export interface TechnicalInfo {
-  name: string;
+export interface GeneralInfo {
+  title: string;
   def: string;
+  url: string;
 }
 
 export interface ExperienceInfo {

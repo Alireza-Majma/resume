@@ -4,11 +4,15 @@ import { EducationInfoComponent } from './components/education-info-component/ed
 import { TechnicalInfoComponent } from './components/technical-info-component/technical-info.component';
 import { CareerHighlightComponent } from './components/career-highlight-component/career-highlight.component';
 import { ExperienceInfoComponent} from './components/experience-info-component/experience-info.component';
+import { ToolInfoComponent } from './components/tool-info-component/tool-info.component';
+import { BlogInfoComponent } from './components/blog-info-component/blog-info.component';
 
 
 const routes: Routes = [
   {path: 'education-info' , component: EducationInfoComponent},
   {path: 'technical-info' , component: TechnicalInfoComponent},
+  {path: 'tool-info' , component: ToolInfoComponent},
+  {path: 'blog-info' , component: BlogInfoComponent},
   {path: 'career-highlight' , component: CareerHighlightComponent},
   {path: 'experience-info' , component: ExperienceInfoComponent},
 ];
