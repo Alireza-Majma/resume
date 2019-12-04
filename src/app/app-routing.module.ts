@@ -4,15 +4,14 @@ import { HomeComponent } from './components/home-component/home.component';
 
 
 const routes: Routes = [
-  {path: 'home' , component: HomeComponent},
+  // {path: 'home' , component: HomeComponent},
   // {path: 'education-info' , component: EducationInfoComponent},
   // {path: 'technical-info' , component: TechnicalInfoComponent},
   // {path: 'career-highlight' , component: CareerHighlightComponent},
   // {path: 'experience-info' , component: ExperienceInfoComponent},
   {path: 'info', loadChildren: () => import('./info-module/info.module').then(m => m.InfoModule) },
-  {path: '' ,  redirectTo: 'home',  pathMatch: 'full'},
-  // {path: '**' ,  component: HomeComponent}
-  {path: '**' ,  redirectTo: 'home'}
+  {path: '' ,  component: HomeComponent,  pathMatch: 'full'},
+  {path: '**' ,  component: HomeComponent}
 ];
 
 @NgModule({

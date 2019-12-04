@@ -16,7 +16,6 @@ export class CareerHighlightComponent implements OnInit {
   InfoList$: Observable<HighlightInfo[]>;
 
   ngOnInit() {
-    console.log('oninit');
     this.InfoList$ = this.service.getHighlightInfo();
    }
 

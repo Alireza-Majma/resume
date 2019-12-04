@@ -15,7 +15,6 @@ export class ExperienceInfoComponent implements OnInit {
 
   ngOnInit() {
      this.infoList$ = this.service.getExperienceInfo();
-     this.infoList$.subscribe(x => console.log(x));
   }
 
 }
