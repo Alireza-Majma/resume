@@ -20,6 +20,10 @@ td, th {
   padding: 8px;
 }
 
+td a {
+  color: antiquewhite;
+}
+
 th {
   background-color: darkslategray;
   font-size: 1.3em;

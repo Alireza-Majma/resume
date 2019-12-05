@@ -14,6 +14,7 @@ export class InfoService {
   static data$: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
+
     InfoService.data$ = new BehaviorSubject<any>({});
     this.getData().subscribe(x => InfoService.data$.next(x));
   }
@@ -51,6 +52,9 @@ export class InfoService {
   }
   public getBlogInfo(): Observable<GeneralInfo[]> {
     return this.getInfo('blog-info');
+  }
+  public getLinkInfo(): Observable<GeneralInfo[]> {
+    return this.getInfo('link-info');
   }
 }
 

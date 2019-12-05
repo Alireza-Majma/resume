@@ -6,12 +6,14 @@ import { CareerHighlightComponent } from './components/career-highlight-componen
 import { ExperienceInfoComponent} from './components/experience-info-component/experience-info.component';
 import { ToolInfoComponent } from './components/tool-info-component/tool-info.component';
 import { BlogInfoComponent } from './components/blog-info-component/blog-info.component';
+import { LinkInfoComponent } from './components/link-info-component/link-info.component';
 
 
 const routes: Routes = [
   {path: 'education-info' , component: EducationInfoComponent},
   {path: 'technical-info' , component: TechnicalInfoComponent},
   {path: 'tool-info' , component: ToolInfoComponent},
+  {path: 'link-info' , component: LinkInfoComponent},
   {path: 'blog-info' , component: BlogInfoComponent},
   {path: 'career-highlight' , component: CareerHighlightComponent},
   {path: 'experience-info' , component: ExperienceInfoComponent},

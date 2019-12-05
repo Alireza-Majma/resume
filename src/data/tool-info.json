@@ -8,5 +8,10 @@
   { "title": "Web Code", "url":"https://webcode.tools/", "def": "Web Code is one of the best code generators out there. You can generate code for various basic and advanced needs by just entering your requirements." },
   { "title": "BundlePhobia", "url":"https://bundlephobia.com/", "def": "BundlePhobia helps you analyze how much size an npm package can add to your project." },
   { "title": "Fingerprint.js", "url":"https://fingerprintjs.com/", "def": "this awesome library produces a distinctive browser identifier without the use of cookies or any data that a malicious user can reset readily. It quickly extracts numerous properties from a web browser, which can be used separately, or to create a hash which can be used to identify a unique user." },
-  { "title": "Canva", "url":"https://www.canva.com/", "def": "Canva has a mission to empower the world to design. With our simple design tool and a can-do attitude, you’ll be achieving your creative goals in no time" }
+  { "title": "Canva", "url":"https://www.canva.com/", "def": "Canva has a mission to empower the world to design. With our simple design tool and a can-do attitude, you’ll be achieving your creative goals in no time" },
+  { "title": "palettes", "url":"https://www.happyhues.co/palettes/6", "def": "eally pretty collection of color combinations" },
+  { "title": "line-awesome", "url":"https://icons8.com/line-awesome", "def": "Swap Font Awesome for modern line icons in one line of code." },
+  { "title": "fontpairings", "url":"https://fontpairings.bypeople.com/", "def": "Find the best font pairings for your next project." },
+  { "title": "Remove-backgrounds", "url":"https://www.stickermule.com/trace", "def": "Instantly remove the background from your photos." },
+  { "title": "colorbox", "url":"https://www.colorbox.io/", "def": "Color is instrumental in how we perceive the world, and that could not be more true within interfaces. Color guides us to predict, understand, and make decisions." }
 ]
