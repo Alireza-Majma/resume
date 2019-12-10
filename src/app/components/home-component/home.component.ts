@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
   }
 
   linkClicked(path: string) {
-    console.log('navigate to path :' + path);
     this.router.navigate([path]);
   }
 

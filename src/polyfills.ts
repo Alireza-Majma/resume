@@ -58,6 +58,11 @@
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
+
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+import * as process from 'process';
+/* tslint:disable:no-string-literal */
+window['process'] = process;
