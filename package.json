@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=https://alireza-majma.github.io/resume/"
+    "deploy": "ng deploy --base-href=https://alireza-majma.github.io/resume/",
+    "merge": "node_modules/.bin/ts-node --dir ./merge ./merge/index.ts",
+    "merge2": "ts-node --project merge/tsconfig.json merge/index.ts"
   },
   "private": true,
   "dependencies": {

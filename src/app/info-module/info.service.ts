@@ -36,31 +36,31 @@ export class InfoService {
   }
 
   public getTechnicalInfo(): Observable<GeneralInfo[]> {
-    return this.getInfo('technical-info');
+    return this.getInfo('technical_info');
   }
 
   public getExperienceInfo(): Observable<ExperienceInfo[]> {
-    return this.getInfo('experience-info');
+    return this.getInfo('experience_info');
   }
 
   public getHighlightInfo(): Observable<HighlightInfo[]> {
-    return this.getInfo('highlight-info');
+    return this.getInfo('highlight_info');
   }
 
   public getEducationInfo(): Observable<EducationInfo[]> {
-    return this.getInfo('education-info');
+    return this.getInfo('education_info');
   }
   public getCertificateInfo(): Observable<EducationInfo[]> {
-    return this.getInfo('certificate-info');
+    return this.getInfo('certificate_info');
   }
   public getToolInfo(): Observable<GeneralInfo[]> {
-    return this.getInfo('tool-info');
+    return this.getInfo('tool_info');
   }
   public getBlogInfo(): Observable<GeneralInfo[]> {
-    return this.getInfo('blog-info');
+    return this.getInfo('blog_info');
   }
   public getLinkInfo(): Observable<GeneralInfo[]> {
-    return this.getInfo('link-info');
+    return this.getInfo('link_info');
   }
 }
 
