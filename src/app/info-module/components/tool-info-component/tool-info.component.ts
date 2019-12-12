@@ -16,7 +16,7 @@ export class ToolInfoComponent implements OnInit, OnDestroy {
   public InfoList$: Observable<GeneralInfo[]>;
 
   ngOnInit() {
-    this.InfoList$ = this.jexiaInfoService.infoList$;
+    this.InfoList$ = this.jexiaInfoService.toolInfoList$;
   }
 
   ngOnDestroy(): void {

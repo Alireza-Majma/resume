@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { EducationInfo } from 'src/app/info-module/models';
+import { JexiaInfoService } from '../../services/jexia-info.service';
 
 @Component({
   selector: 'app-general-info-component',
@@ -10,13 +11,13 @@ import { EducationInfo } from 'src/app/info-module/models';
 })
 export class EducationInfoComponent implements OnInit {
 
-  constructor(public service: InfoService) { }
+  constructor(private jexiaInfoService: JexiaInfoService ) { }
   EducationList$: Observable<EducationInfo[]>;
   CertificateList$: Observable<EducationInfo[]>;
 
   ngOnInit() {
-    this.EducationList$ = this.service.getEducationInfo();
-    this.CertificateList$ = this.service.getCertificateInfo();
+    this.EducationList$ = this.jexiaInfoService.educationInfoList$;
+    this.CertificateList$ = this.jexiaInfoService.certificatetInfoList$;
    }
 
 }

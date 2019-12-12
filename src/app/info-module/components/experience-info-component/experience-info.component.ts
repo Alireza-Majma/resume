@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { ExperienceInfo } from 'src/app/info-module/models';
+import { JexiaInfoService } from '../../services/jexia-info.service';
 
 @Component({
   selector: 'app-experience-info-component',
@@ -10,11 +11,11 @@ import { ExperienceInfo } from 'src/app/info-module/models';
 })
 export class ExperienceInfoComponent implements OnInit {
 
-  constructor(private service: InfoService) { }
+  constructor(private jexiaInfoService: JexiaInfoService ) { }
   infoList$: Observable<ExperienceInfo[]>;
 
   ngOnInit() {
-     this.infoList$ = this.service.getExperienceInfo();
+     this.infoList$ = this.jexiaInfoService.experienceInfoList$;
   }
 
 }

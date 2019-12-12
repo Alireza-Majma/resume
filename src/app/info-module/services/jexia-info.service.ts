@@ -3,8 +3,9 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JexiaAccess } from './jexia-access';
-import { GeneralInfo } from '../models';
+import { GeneralInfo, EducationInfo, HighlightInfo, ExperienceInfo } from '../models';
 import { JexiaResolver } from './jexia-resolver';
+import { runInThisContext } from 'vm';
 
 
 // @Injectable({
@@ -14,31 +15,63 @@ import { JexiaResolver } from './jexia-resolver';
 export class JexiaInfoService {
 
 
-  toolInfoSubject: BehaviorSubject<GeneralInfo[]>;
+  // toolInfoSubject: BehaviorSubject<GeneralInfo[]>;
+  infoSubject: {[key: string]: BehaviorSubject<any[]>;};
 
   constructor(
     private http: HttpClient
   ) {
-    this.toolInfoSubject = new BehaviorSubject<GeneralInfo[]>([]);
+    // this.toolInfoSubject = new BehaviorSubject<GeneralInfo[]>([]);
+    this.infoSubject = {};
   }
 
-  get infoList$(): Observable<GeneralInfo[]> {
-    // console.log(this.toolInfoSubject.getValue());
-    if (!this.toolInfoSubject.getValue().length) {
-      this.getData();
+  getInfoList$(dsName: string): Observable<any[]> {
+    this.infoSubject[dsName] = this.infoSubject[dsName] || new BehaviorSubject<any[]>([]);
+    if (!this.infoSubject[dsName].getValue().length) {
+      this.getData(dsName, (x) => this.infoSubject[dsName].next(x));
     }
-    return this.toolInfoSubject.asObservable();
+    return this.infoSubject[dsName].asObservable();
   }
 
-  async getData() {
-    try {
-      await JexiaAccess.Init();
-      await this.http.get<GeneralInfo[]>(JexiaAccess.dataSetPath('tool_info'), JexiaAccess.Header)
-      .subscribe(x => this.toolInfoSubject.next(x));
-    } catch (error) {
-      console.log(error);
-    }
+  get toolInfoList$(): Observable<GeneralInfo[]> {
+    return this.getInfoList$('tool_info') as Observable<GeneralInfo[]>;
+  }
 
-    JexiaAccess.Terminate();
+  get linkInfoList$(): Observable<GeneralInfo[]> {
+    return this.getInfoList$('link_info') as Observable<GeneralInfo[]>;
+  }
+
+  get certificatetInfoList$(): Observable<EducationInfo[]> {
+    return this.getInfoList$('certificate_info') as Observable<EducationInfo[]>;
+  }
+  get educationInfoList$(): Observable<EducationInfo[]> {
+    return this.getInfoList$('education_info') as Observable<EducationInfo[]>;
+  }
+
+  get highlightInfoList$(): Observable<HighlightInfo[]> {
+    return this.getInfoList$('highlight_info') as Observable<HighlightInfo[]>;
+  }
+
+  get technicalInfoList$(): Observable<GeneralInfo[]> {
+    return this.getInfoList$('technical_info') as Observable<GeneralInfo[]>;
+  }
+
+  get blogInfoList$(): Observable<GeneralInfo[]> {
+    return this.getInfoList$('blog_info') as Observable<GeneralInfo[]>;
+  }
+
+  get experienceInfoList$(): Observable<ExperienceInfo[]> {
+    return this.getInfoList$('experience_info') as Observable<ExperienceInfo[]>;
+  }
+
+  getData(dsName: string, callBack: (x: any[]) => void) {
+    JexiaAccess.Init().then(() => {
+      this.http.get<GeneralInfo[]>(JexiaAccess.dataSetPath(dsName), JexiaAccess.Header)
+        .subscribe(x => {
+          callBack(x);
+          // this.toolInfoSubject.next(x);
+          JexiaAccess.Terminate();
+        });
+    });
   }
 }
