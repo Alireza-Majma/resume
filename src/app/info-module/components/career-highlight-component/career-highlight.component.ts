@@ -3,7 +3,7 @@ import { InfoService } from '../../info.service';
 import { HighlightInfo } from 'src/app/info-module/models';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { JexiaInfoService } from '../../services/jexia-info.service';
+// import { JexiaInfoService } from '../../services/jexia-info.service';
 
 @Component({
   selector: 'app-career-highlight-component',
@@ -12,12 +12,13 @@ import { JexiaInfoService } from '../../services/jexia-info.service';
 })
 export class CareerHighlightComponent implements OnInit {
 
-  constructor(private jexiaInfoService: JexiaInfoService ) { }
+  // constructor(private jexiaInfoService: JexiaInfoService, private infoService: InfoService ) { }
+  constructor(private infoService: InfoService ) { }
 
   InfoList$: Observable<HighlightInfo[]>;
 
   ngOnInit() {
-    this.InfoList$ = this.jexiaInfoService.highlightInfoList$;
+    this.InfoList$ = this.infoService.highlightInfoList$;
    }
 
 }

@@ -15,7 +15,7 @@ import { environment } from 'src/environments/environment';
       HomeComponent
    ],
    imports: [
-      BrowserModule.withServerTransition({ appId: 'serverApp' }),
+      BrowserModule,
       AppRoutingModule,
       HttpClientModule,
       RouterModule

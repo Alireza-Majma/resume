@@ -35,31 +35,30 @@ export class InfoService {
     return InfoService.data$.asObservable().pipe(map(x => x[name]));
   }
 
-  public getTechnicalInfo(): Observable<GeneralInfo[]> {
+  get technicalInfoList$(): Observable<GeneralInfo[]> {
     return this.getInfo('technical_info');
   }
 
-  public getExperienceInfo(): Observable<ExperienceInfo[]> {
+  get experienceInfoList$(): Observable<ExperienceInfo[]> {
     return this.getInfo('experience_info');
   }
 
-  public getHighlightInfo(): Observable<HighlightInfo[]> {
+  get highlightInfoList$(): Observable<HighlightInfo[]> {
     return this.getInfo('highlight_info');
   }
-
-  public getEducationInfo(): Observable<EducationInfo[]> {
+  get educationInfoList$(): Observable<EducationInfo[]> {
     return this.getInfo('education_info');
   }
-  public getCertificateInfo(): Observable<EducationInfo[]> {
+  get certificatetInfoList$(): Observable<EducationInfo[]> {
     return this.getInfo('certificate_info');
   }
-  public getToolInfo(): Observable<GeneralInfo[]> {
+  get toolInfoList$(): Observable<GeneralInfo[]> {
     return this.getInfo('tool_info');
   }
-  public getBlogInfo(): Observable<GeneralInfo[]> {
+  get blogInfoList$(): Observable<GeneralInfo[]> {
     return this.getInfo('blog_info');
   }
-  public getLinkInfo(): Observable<GeneralInfo[]> {
+  get linkInfoList$(): Observable<GeneralInfo[]> {
     return this.getInfo('link_info');
   }
 }

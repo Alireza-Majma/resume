@@ -1,3 +1,5 @@
+/*
+
 import { Injectable } from '@angular/core';
 import { Client, jexiaClient, WebStorageComponent, IAuthOptions } from 'jexia-sdk-js/browser';
 import { HttpClient } from '@angular/common/http';
@@ -15,3 +17,4 @@ export class JexiaResolver implements Resolve<Client> {
     return JexiaAccess.Init();
   }
 }
+*/

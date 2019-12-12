@@ -7,7 +7,7 @@ import { ExperienceInfoComponent} from './components/experience-info-component/e
 import { ToolInfoComponent } from './components/tool-info-component/tool-info.component';
 import { BlogInfoComponent } from './components/blog-info-component/blog-info.component';
 import { LinkInfoComponent } from './components/link-info-component/link-info.component';
-import { JexiaResolver } from './services/jexia-resolver';
+// import { JexiaResolver } from './services/jexia-resolver';
 
 
 const routes: Routes = [

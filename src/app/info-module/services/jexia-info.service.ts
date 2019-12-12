@@ -1,12 +1,10 @@
+/*
 import { Injectable, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JexiaAccess } from './jexia-access';
 import { GeneralInfo, EducationInfo, HighlightInfo, ExperienceInfo } from '../models';
-import { JexiaResolver } from './jexia-resolver';
-import { runInThisContext } from 'vm';
-
 
 // @Injectable({
 //   providedIn: 'root'
@@ -75,3 +73,4 @@ export class JexiaInfoService {
     });
   }
 }
+*/

@@ -6,7 +6,7 @@
     "tasks": ["Design and develop FIT system using ASP MVC asynchronies programing techniques, Kendo UI, SQL Server, Entity Framework, and Azure DevOps to automate continuous software integration and delivery, using ID4 server to support authentication and authorization",
           "Design and develop OMDC Web Application using ASP NET CORE API, SQL Server, Entity Framework core as backend and Angular 7 and Kendo UI as front end. Develop Azure DevOps to automate continuous software delivery, secure application using Azure Identity, develop services to support emails, developed unit and integration tests using Jasmin and Karma, Created Stored Procedures, Triggers and Views and developed complex SQL queries",
           "Design and implement configurable dynamic form library for Angular to enable end-user to customize input forms",
-          "Design and developed Nuget package for logging using Asp Net core"]
+          "Design and developed a logging utility using Asp Net core and publish it as Nuget package "]
   } ,
   {
     "employer": "Brookfield Global Integrated Solutions, Toronto, ON",

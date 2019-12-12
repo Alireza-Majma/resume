@@ -1,3 +1,5 @@
+/*
+
 import { Injectable } from '@angular/core';
 import { Client, jexiaClient, WebStorageComponent, IAuthOptions } from 'jexia-sdk-js/browser';
 import { HttpHeaders } from '@angular/common/http';
@@ -58,3 +60,4 @@ export class JexiaAccess {
   }
 }
 
+*/

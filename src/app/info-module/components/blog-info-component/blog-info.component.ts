@@ -3,7 +3,7 @@ import { GeneralInfo } from 'src/app/info-module/models';
 import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { JexiaInfoService } from '../../services/jexia-info.service';
+// import { JexiaInfoService } from '../../services/jexia-info.service';
 
 
 
@@ -14,12 +14,13 @@ import { JexiaInfoService } from '../../services/jexia-info.service';
 })
 export class BlogInfoComponent implements OnInit {
 
-  constructor(private jexiaInfoService: JexiaInfoService ) { }
+  // constructor(private jexiaInfoService: JexiaInfoService, private infoService: InfoService ) { }
+  constructor(private infoService: InfoService ) { }
 
   public InfoList$: Observable<GeneralInfo[]>;
 
   ngOnInit() {
-    this.InfoList$ = this.jexiaInfoService.blogInfoList$;
+    this.InfoList$ = this.infoService.blogInfoList$;
   }
 
 }

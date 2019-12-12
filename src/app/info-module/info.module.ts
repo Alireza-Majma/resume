@@ -10,8 +10,8 @@ import { ExperienceInfoComponent} from './components/experience-info-component/e
 import { InfoRoutingModule } from './info-module-routing';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoService } from './info.service';
-import { JexiaInfoService } from './services/jexia-info.service';
-import { JexiaResolver } from './services/jexia-resolver';
+// import { JexiaInfoService } from './services/jexia-info.service';
+// import { JexiaResolver } from './services/jexia-resolver';
 
 
 @NgModule({
@@ -30,9 +30,9 @@ import { JexiaResolver } from './services/jexia-resolver';
     BlogInfoComponent
   ],
   providers: [
-    InfoService,
-    JexiaResolver,
-    JexiaInfoService
+    InfoService
+    // JexiaResolver,
+    // JexiaInfoService
   ]
 })
 export class InfoModule { }
