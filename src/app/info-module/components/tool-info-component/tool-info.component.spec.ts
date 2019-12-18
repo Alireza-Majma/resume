@@ -3,7 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ToolInfoComponent } from './tool-info-component.component';
+import { ToolInfoComponent } from './tool-info.component';
+import { InfoService } from '../../services/info.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ToolInfoComponent', () => {
   let component: ToolInfoComponent;
@@ -11,7 +13,9 @@ describe('ToolInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToolInfoComponent ]
+      imports:[HttpClientModule],
+      declarations: [ ToolInfoComponent ],
+      providers:[InfoService]
     })
     .compileComponents();
   }));

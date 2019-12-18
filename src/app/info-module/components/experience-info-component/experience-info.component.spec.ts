@@ -3,7 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ExperienceInfoComponent } from './experience-info-component.component';
+import { ExperienceInfoComponent } from './experience-info.component';
+import { InfoService } from '../../services/info.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ExperienceInfoComponent', () => {
   let component: ExperienceInfoComponent;
@@ -11,7 +13,9 @@ describe('ExperienceInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExperienceInfoComponent ]
+      imports:[HttpClientModule],
+      declarations: [ ExperienceInfoComponent ],
+      providers:[InfoService]
     })
     .compileComponents();
   }));

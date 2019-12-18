@@ -1,22 +1,10 @@
 import { Injectable, OnInit } from '@angular/core';
-import { GeneralInfo, ExperienceInfo, HighlightInfo, EducationInfo } from './models';
+import { GeneralInfo, ExperienceInfo, HighlightInfo, EducationInfo } from './../models';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs/operators';
-// import {jexiaClient, dataOperations} from 'jexia-sdk-js/browser';
 
-// const jexiaSDK = require('jexia-sdk-js/node'); // use require('jexia-sdk-js/browser') for browser
-// const dataModule = dataOperations();
-// const credentials = {
-//   projectID: 'e4158913-ef39-4731-ade9-b8da5d9ae283',
-//   key: '39bb377f-285e-4356-9836-db01a7e1642c',
-//   secret: 'QsfPG5BpqVIYw1HTzGm+1z8iuR7fR+JlgN1dS6GAyHBOFvHmq1u71KNyPxCT2KlTkLlpjU6sghgojRrzggN1dw=='
-// };
-
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class InfoService {
 
   static data$: BehaviorSubject<any>;

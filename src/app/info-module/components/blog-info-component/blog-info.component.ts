@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneralInfo } from 'src/app/info-module/models';
-import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-// import { JexiaInfoService } from '../../services/jexia-info.service';
-
+import { InfoService } from '../../services/info.service';
 
 
 @Component({
@@ -14,7 +12,6 @@ import { tap } from 'rxjs/operators';
 })
 export class BlogInfoComponent implements OnInit {
 
-  // constructor(private jexiaInfoService: JexiaInfoService, private infoService: InfoService ) { }
   constructor(private infoService: InfoService ) { }
 
   public InfoList$: Observable<GeneralInfo[]>;

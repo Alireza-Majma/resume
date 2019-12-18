@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoService } from '../../info.service';
 import { HighlightInfo } from 'src/app/info-module/models';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-// import { JexiaInfoService } from '../../services/jexia-info.service';
+import { InfoService } from '../../services/info.service';
+
 
 @Component({
   selector: 'app-career-highlight-component',

@@ -3,7 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { CareerHighlightComponent } from './career-highlight-component.component';
+import { CareerHighlightComponent } from './career-highlight.component';
+import { InfoService } from '../../services/info.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('CareerHighlightComponent', () => {
   let component: CareerHighlightComponent;
@@ -11,7 +13,9 @@ describe('CareerHighlightComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CareerHighlightComponent ]
+      imports:[HttpClientModule],
+      declarations: [ CareerHighlightComponent ],
+      providers:[InfoService]
     })
     .compileComponents();
   }));

@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { LinkInfoComponent } from './link-info.component';
+import { InfoService } from '../../services/info.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('LinkInfoComponent', () => {
   let component: LinkInfoComponent;
@@ -11,7 +13,9 @@ describe('LinkInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkInfoComponent ]
+      imports:[HttpClientModule],
+      declarations: [ LinkInfoComponent ],
+      providers:[InfoService]
     })
     .compileComponents();
   }));

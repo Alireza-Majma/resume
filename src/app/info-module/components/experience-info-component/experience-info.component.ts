@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoService } from '../../info.service';
 import { Observable } from 'rxjs';
 import { ExperienceInfo } from 'src/app/info-module/models';
-// import { JexiaInfoService } from '../../services/jexia-info.service';
+import { InfoService } from '../../services/info.service';
 
 @Component({
   selector: 'app-experience-info-component',

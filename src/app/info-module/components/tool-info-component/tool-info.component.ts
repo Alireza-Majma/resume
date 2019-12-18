@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GeneralInfo } from 'src/app/info-module/models';
-import { InfoService } from '../../info.service';
 import { Observable, from } from 'rxjs';
-// import { JexiaInfoService } from '../../services/jexia-info.service';
+import { InfoService } from '../../services/info.service';
+
 
 @Component({
   selector: 'app-tool-info-component',

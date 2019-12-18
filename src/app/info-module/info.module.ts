@@ -9,16 +9,14 @@ import { CareerHighlightComponent } from './components/career-highlight-componen
 import { ExperienceInfoComponent} from './components/experience-info-component/experience-info.component';
 import { InfoRoutingModule } from './info-module-routing';
 import { HttpClientModule } from '@angular/common/http';
-import { InfoService } from './info.service';
-// import { JexiaInfoService } from './services/jexia-info.service';
-// import { JexiaResolver } from './services/jexia-resolver';
-
+import { InfoService } from './services/info.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     InfoRoutingModule,
-    HttpClientModule
+    RouterModule
   ],
   declarations: [
     EducationInfoComponent,
@@ -33,6 +31,9 @@ import { InfoService } from './info.service';
     InfoService
     // JexiaResolver,
     // JexiaInfoService
+  ],
+  exports:[
+    InfoService
   ]
 })
 export class InfoModule { }
