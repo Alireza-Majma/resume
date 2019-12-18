@@ -2,13 +2,7 @@ import * as fs from 'fs';
 import * as glob from 'glob';
 import * as jexiaSDK from 'jexia-sdk-js/node';
 import { Client, IFilteringCriterion, field } from 'jexia-sdk-js/node';
-import { ICondition } from 'jexia-sdk-js/api/core/filteringCondition';
-import { async } from 'q';
-import { from, Subject, pipe, of, Observable, concat, empty } from 'rxjs';
-import { fromPromise } from 'rxjs/internal/observable/fromPromise';
-import { mergeMap, delay, tap, map, first, startWith, endWith } from 'rxjs/operators';
-import * as util from 'util';
-import { promise } from 'selenium-webdriver';
+
 
 
 
