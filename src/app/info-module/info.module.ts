@@ -31,9 +31,6 @@ import { RouterModule } from '@angular/router';
     InfoService
     // JexiaResolver,
     // JexiaInfoService
-  ],
-  exports:[
-    InfoService
   ]
 })
 export class InfoModule { }
