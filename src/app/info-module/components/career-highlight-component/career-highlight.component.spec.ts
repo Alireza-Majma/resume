@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { CareerHighlightComponent } from './career-highlight.component';
 import { InfoService } from '../../services/info.service';
 import { HttpClientModule } from '@angular/common/http';
+import { InfoModuleTest } from '../../info.module.test';
 
 describe('CareerHighlightComponent', () => {
   let component: CareerHighlightComponent;
@@ -13,9 +14,7 @@ describe('CareerHighlightComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientModule],
-      declarations: [ CareerHighlightComponent ],
-      providers:[InfoService]
+      imports:[InfoModuleTest]
     })
     .compileComponents();
   }));

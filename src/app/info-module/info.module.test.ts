@@ -1,4 +1,4 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, Injectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EducationInfoComponent } from './components/education-info-component/education-info.component';
 import { TechnicalInfoComponent } from './components/technical-info-component/technical-info.component';
@@ -10,15 +10,27 @@ import { ExperienceInfoComponent} from './components/experience-info-component/e
 import { InfoRoutingModule } from './info-module-routing';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoService } from './services/info.service';
-import { DataService } from './services/data.service';
 import { RouterModule } from '@angular/router';
+import { Observable, from, of } from 'rxjs';
+import { DataService } from './services/data.service';
+import * as data from './../../assets/data.json';
+
+
+@Injectable()
+export class DataServiceMock  {
+  public getData(): Observable<any> {
+    // const data = {} as any;
+    return of (data as any) as Observable<any>;
+  }
+
+}
+
 
 @NgModule({
   imports: [
     CommonModule,
     InfoRoutingModule,
-    RouterModule,
-    HttpClientModule
+    RouterModule
   ],
   declarations: [
     EducationInfoComponent,
@@ -30,10 +42,11 @@ import { RouterModule } from '@angular/router';
     BlogInfoComponent
   ],
   providers: [
-    DataService,
+    { provide: DataService, useClass: DataServiceMock },
     InfoService
+
     // JexiaResolver,
     // JexiaInfoService
   ]
 })
-export class InfoModule { }
+export class InfoModuleTest { }

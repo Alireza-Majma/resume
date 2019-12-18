@@ -2,21 +2,18 @@ import { Injectable, OnInit } from '@angular/core';
 import { GeneralInfo, ExperienceInfo, HighlightInfo, EducationInfo } from './../models';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+
 import { tap, map } from 'rxjs/operators';
+import { DataService } from './data.service';
 
 @Injectable()
 export class InfoService {
 
   static data$: BehaviorSubject<any>;
 
-  constructor(private http: HttpClient) {
+  constructor(private dataService: DataService) {
     InfoService.data$ = new BehaviorSubject<any>({});
-    this.getData().subscribe(x => InfoService.data$.next(x));
-  }
-
-  public getData(): Observable<GeneralInfo[]> {
-    const rslt = this.http.get('assets/data.json');
-    return rslt as any;
+    this.dataService.getData().subscribe(x => InfoService.data$.next(x));
   }
 
   getInfo(name: string): Observable<any>  {

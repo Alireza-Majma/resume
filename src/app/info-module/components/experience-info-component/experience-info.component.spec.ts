@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { ExperienceInfoComponent } from './experience-info.component';
 import { InfoService } from '../../services/info.service';
 import { HttpClientModule } from '@angular/common/http';
+import { InfoModuleTest } from '../../info.module.test';
 
 describe('ExperienceInfoComponent', () => {
   let component: ExperienceInfoComponent;
@@ -13,9 +14,7 @@ describe('ExperienceInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientModule],
-      declarations: [ ExperienceInfoComponent ],
-      providers:[InfoService]
+      imports:[InfoModuleTest]
     })
     .compileComponents();
   }));

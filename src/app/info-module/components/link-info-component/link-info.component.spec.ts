@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { LinkInfoComponent } from './link-info.component';
 import { InfoService } from '../../services/info.service';
 import { HttpClientModule } from '@angular/common/http';
+import { InfoModuleTest } from '../../info.module.test';
 
 describe('LinkInfoComponent', () => {
   let component: LinkInfoComponent;
@@ -13,9 +14,7 @@ describe('LinkInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[HttpClientModule],
-      declarations: [ LinkInfoComponent ],
-      providers:[InfoService]
+      imports:[InfoModuleTest]
     })
     .compileComponents();
   }));
