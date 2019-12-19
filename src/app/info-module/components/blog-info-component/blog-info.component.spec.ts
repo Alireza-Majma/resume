@@ -14,7 +14,8 @@ describe('BlogInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[InfoModuleTest]
+      imports:[ InfoModuleTest]
+      // declarations:[ BlogInfoComponent]
     })
     .compileComponents();
   }));

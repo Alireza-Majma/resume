@@ -30,8 +30,8 @@ import { RouterModule } from '@angular/router';
     BlogInfoComponent
   ],
   providers: [
-    DataService,
-    InfoService
+    // DataService,
+    // InfoService
     // JexiaResolver,
     // JexiaInfoService
   ]

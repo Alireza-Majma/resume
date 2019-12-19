@@ -4,7 +4,9 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+   providedIn: 'root'
+})
 export class DataService {
 
   constructor(private http: HttpClient) { }

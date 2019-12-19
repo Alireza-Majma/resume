@@ -15,6 +15,7 @@ describe('EducationInfoComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports:[InfoModuleTest]
+      // declarations: [EducationInfoComponent]
     })
     .compileComponents();
   }));

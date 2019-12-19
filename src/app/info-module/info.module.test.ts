@@ -1,3 +1,5 @@
+
+
 import { NgModule, APP_INITIALIZER, Injectable } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EducationInfoComponent } from './components/education-info-component/education-info.component';
@@ -14,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { Observable, from, of } from 'rxjs';
 import { DataService } from './services/data.service';
 import {  } from 'jasmine';
+import { InfoModule } from './info.module';
 
 @Injectable()
 export class DataServiceMock {
@@ -24,36 +27,24 @@ export class DataServiceMock {
   }
 }
 
-function DataServiceMockFactory() {
-  const service = jasmine.createSpyObj('DataService', ['getData']);
-  service.getData.and.returnValue(of({ highlight_info: [{ def: 'AAA' }] }));
+// export function DataServiceMockFactory() {
+//   const service = jasmine.createSpyObj('DataService', ['getData']);
+//   service.getData.and.returnValue(of({ highlight_info: [{ def: 'AAA' }] }));
 
-  // service.getData.and.returnValue(of(data));
-  return service;
-}
+//   // service.getData.and.returnValue(of(data));
+//   return service;
+// }
 
 @NgModule({
   imports: [
-    CommonModule,
-    InfoRoutingModule,
-    RouterModule
+    InfoModule
   ],
   declarations: [
-    EducationInfoComponent,
-    TechnicalInfoComponent,
-    CareerHighlightComponent,
-    ExperienceInfoComponent,
-    ToolInfoComponent,
-    LinkInfoComponent,
-    BlogInfoComponent
   ],
   providers: [
-    // { provide: DataService, useClass: DataServiceMock },
-    { provide: DataService, useFactory: DataServiceMockFactory },
+    { provide: DataService, useClass: DataServiceMock },
+    // { provide: DataService, useFactory: DataServiceMockFactory },
     InfoService
-
-    // JexiaResolver,
-    // JexiaInfoService
   ]
 })
 export class InfoModuleTest { }

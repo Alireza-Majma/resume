@@ -6,7 +6,9 @@ import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs/operators';
 import { DataService } from './data.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class InfoService {
 
   static data$: BehaviorSubject<any>;
